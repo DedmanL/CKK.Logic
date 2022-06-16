@@ -12,9 +12,9 @@ namespace CKK.Logic.Models
         private int _quantity;
 
 
-        public ShoppingCartItem(Product product, int quantity)
+        public ShoppingCartItem(Product prod, int quantity)
         {
-            _product = product;
+            _product = prod;
             _quantity = quantity;
         }
         public int GetQuantity()
@@ -29,9 +29,13 @@ namespace CKK.Logic.Models
         {
             return _product;
         }
-        public void SetProduct(Product product)
+        public void SetProduct(Product prod)
         {
-            _product = product;
+            _product = prod;
+        }
+        public decimal GetTotal(decimal total, decimal _price)//Method that multiplies the price and quantity to get a total cost.
+        {
+            return total = _price * _quantity;
         }
     }
 }
