@@ -42,31 +42,13 @@ namespace CKK.Logic.Models
             { productNumber = 0; }//Sets value at 0 based on statement.
             return productNumber;//Returns value based on if statement results.
         }
-        public int GetStoreItem(int productNumber, Product prod)//Method that gets the product by its position.
+        public int GetStoreItem(int productNumber)//Method that gets the product by its position.
         {
-            if (productNumber == 1)
-            { prod = product1; }
-            if (productNumber == 2)
-            { prod = product2; }
-            if (productNumber == 3)
-            { prod = product3; }
-            else
-            { prod = null; }
-            return productNumber;
+
         }
-        public int FindStoreItemByld(int id, Product prod)
+        public int FindStoreItemByld(int id)
         {
-            if (id == 1)
-            { prod = product1; }
-            if (id == 2)
-            { prod = product1; }
-            if (id == 3)
-            { prod = product1; }
-            if (id <= 0)//If no product has matching id.
-            { prod = null; }
-            if (id >= 1)
-            { prod = product1; }
-            return id;
+
         }
     }
 }

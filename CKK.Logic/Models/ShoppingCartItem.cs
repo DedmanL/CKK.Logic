@@ -10,8 +10,6 @@ namespace CKK.Logic.Models
     {
         private Product _product;
         private int _quantity;
-
-
         public ShoppingCartItem(Product prod, int quantity)
         {
             _product = prod;
@@ -33,9 +31,10 @@ namespace CKK.Logic.Models
         {
             _product = prod;
         }
-        public decimal GetTotal(decimal total, decimal _price)//Method that multiplies the price and quantity to get a total cost.
+        public decimal GetTotal()//Method that multiplies the price and quantity to get a total cost.
         {
-            return total = _price * _quantity;
+            decimal total = _product._price * _quantity;
+            return total;
         }
     }
 }
