@@ -43,30 +43,15 @@ namespace CKK.Logic.Models
         }
         public int GetStoreItem(int productNumber)//Method that gets the product by its position.
         {
-            if (productNumber == 1)//get method for product based on position.
-            { productNumber = prod; }
-            if (productNumber != (product1, product2, product3) )//invalid product number.
-            { prod = null; }
-            if (product1 == null)//P1 is empty return null.
-            { prod = null; }
-            if (product2 == null)//P2 is empty return null.
-            { prod = null; }
-            if (product3 == null)//P3 is empty return null.
-            { prod = null; }
-            return prod;//returns correct product based on position.
+            
+
+            return prod;
         }
         public int FindStoreItemByld(int id)
         {
-            if (id == product1._id) { prod = product1; }
-                else if (id != product1._id) { prod = product2; }
-                    else if (id != product2._id) { prod = product3; }
-                        else if (id != product3._id) { prod = null; }//return null.
 
-            if (product1._id == product2._id) { id = product1._id; }
-                else if (product2._id == product3._id) { id = product2._id; }
-                    else if (product1._id == product3._id) { id = product1._id; }
 
-            return prod;//returns correct product based on entered id.
+            return prod;
         }
     }
 }
