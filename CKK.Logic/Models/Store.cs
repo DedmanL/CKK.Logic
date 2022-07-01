@@ -25,10 +25,10 @@ namespace CKK.Logic.Models
         public void AddStoreItem(Product prod)//Method that adds item to the store.
         {
             if(_product1 == null) { _product1 = prod; }
-                else if (_product2 == null) { prod = _product2; }
-                    else if (_product3 == null) { prod = _product3; }
+                else if (_product2 == null) {_product2 = prod; }
+                    else if (_product3 == null) {_product3 = prod; }
             
-            if(prod == null) { Console.WriteLine("No available product."); }
+            else if(prod == null) { Console.WriteLine("No available product."); }
 
         }
         public void RemoveStoreItem(int productNumber)//Method that removes a product from the store.
