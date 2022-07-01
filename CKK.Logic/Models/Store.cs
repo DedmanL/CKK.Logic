@@ -22,7 +22,7 @@ namespace CKK.Logic.Models
         { return _name; }
         public void SetName(string name)
         { _name = name; }
-        private void AddStoreItem(Product prod)//Method that adds item to the store.
+        public void AddStoreItem(Product prod)//Method that adds item to the store.
         {
             if(_product1 == null) { prod = _product1; }
                 else if (_product1 != null) { prod = _product2; }
@@ -31,13 +31,13 @@ namespace CKK.Logic.Models
             if(prod == null) { prod = null; }
 
         }
-        private void RemoveStoreItem(int productNumber)//Method that removes a product from the store.
+        public void RemoveStoreItem(int productNumber)//Method that removes a product from the store.
         {
             while(productNumber >= 1)//States value must be greater than or equal to 1 to execute next line.
             { productNumber -= 1; }//Change this.
 
         }
-        private Product GetStoreItem(int productNumber)//Method that gets the product by its position.
+        public Product GetStoreItem(int productNumber)//Method that gets the product by its position.
         {
             if (productNumber == 1) { return _product1; }//method for finding product based on position
             if (productNumber == 2) { return _product2; }
@@ -45,7 +45,7 @@ namespace CKK.Logic.Models
             else { return null; }//if productNumber is invalid return null.
 
         }
-        private Product FindStoreItemByld(int id)
+        public Product FindStoreItemById(int id)
         {
             if (id == 1) { return _product1; }//return product with same id.
             if (id == 2) { return _product2; }
