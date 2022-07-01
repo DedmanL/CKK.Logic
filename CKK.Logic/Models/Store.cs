@@ -24,18 +24,18 @@ namespace CKK.Logic.Models
         { _name = name; }
         public void AddStoreItem(Product prod)//Method that adds item to the store.
         {
-            if(_product1 == null) { prod = _product1; }
-                else if (_product1 != null) { prod = _product2; }
-                    else if (_product2 != null) { prod = _product3; }
+            if(_product1 == null) { _product1 = prod; }
+                else if (_product2 == null) { prod = _product2; }
+                    else if (_product3 == null) { prod = _product3; }
             
-            if(prod == null) { prod = null; }
+            if(prod == null) { Console.WriteLine("No available product."); }
 
         }
         public void RemoveStoreItem(int productNumber)//Method that removes a product from the store.
         {
-            while(productNumber >= 1)//States value must be greater than or equal to 1 to execute next line.
-            { productNumber -= 1; }//Change this.
-
+            if (_product1 != null && productNumber == 1) { _product1 = null; }
+            if (_product2 != null && productNumber == 2) { _product2 = null; }
+            if (_product3 != null && productNumber == 3) { _product3 = null; }
         }
         public Product GetStoreItem(int productNumber)//Method that gets the product by its position.
         {
@@ -47,9 +47,9 @@ namespace CKK.Logic.Models
         }
         public Product FindStoreItemById(int id)
         {
-            if (id == 1) { return _product1; }//return product with same id.
-            if (id == 2) { return _product2; }
-            if (id == 3) { return _product3; }
+            if (_product1.GetId() == id) { return _product1; }//return product with same id.
+            if (_product2.GetId() == id) { return _product2; }
+            if (_product3.GetId() == id) { return _product3; }
             else { return null; }
         }
     }
